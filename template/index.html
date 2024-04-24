@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisalhamento - Vigas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class='top-logo-h1'>
+        <img src="{{ url_for('static', filename='logo-ufma.png') }}" alt="logo-ufma">
+        <div>
+            <h1>Dimensionamento de Vigas ao Cisalhamento</h1>
+            <p style="color: rgb(1, 255, 228); font-size: 20px">Trabalho realizado para Disciplina de Redes de Computadores - DCCMAPI - Ricardo Corsini de Carvalho</p>
+            <p style="color: rgb(1, 255, 228); font-size: 20px">Prof. Dr. Mario Antonio Meireles Teixeira</p>
+        </div>  
+    </div>
+    <div class='container'>
+        <form action="/submit" method="post">
+            
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="bw">bw (cm):</label>
+            <input type="number" id="bw" name="bw" step="any" required>
+
+            <label for="d">d (cm):</label>
+            <input type="number" id="d" name="d" step="any" required>
+
+            <label for="vk">Vk (kN):</label>
+            <input type="number" id="vk" name="vk" step="any" required>
+
+            <label for="gama_c">gama c (maj. cargas):</label>
+            <input type="number" id="gama_c" name="gama_c" step="any" required>
+
+            <label for="gama_c2">gama c2 (min. resistência concreto):</label>
+            <input type="number" id="gama_c2" name="gama_c2" step="any" required>
+
+            <label for="fywk">fywk (MPa):</label>
+            <input type="number" id="fywk" name="fywk" step="any" required>
+
+            <label for="gama_s">gama s (min. resistência concreto):</label>
+            <input type="number" id="gama_s" name="gama_s" step="any" required>
+
+            <label for="fck">Fck (MPa):</label>
+            <input type="number" id="fck" name="fck" step="any" required>
+
+            <label for="stittupleg">Ramos:</label>
+            <input type="text" id="stittupleg" name="stittupleg" required>
+
+            <button type="submit">Download</button>
+        </form>
+        
+        <p class='text-container'>Como sugestão, entre com os seguintes valores para realizar o teste:<br><br> Nome: livre <br> bw (cm): 20 <br> d (cm): 50 <br> Vk (kN): 250 <br> Gama c (cm): 1.4 <br> Gama c2 (cm): 1.4 <br> Fywk: 500 <br> Gama S: 1.15 <br> Fck: 30 <br> Ramos: 2 </p>
+        
+    </div>
+    
+</body>
+</html>
