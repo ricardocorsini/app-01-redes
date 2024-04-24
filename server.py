@@ -28,16 +28,16 @@ def submit():
         BeamCreated.generate_memory()
 
         path_memory = name + '_' + 'cis' + '.docx'
-
-        
+       
         print(f"Recebido: {name}, {bw}, {d}, {vk}, {gama_c}, {gama_c2}, {fywk}, {gama_s}, {fck}, {stittupleg}")
 
-        # Depois de processar, podemos retornar uma resposta ou redirecionar
         return send_file(path_memory, as_attachment=True, download_name=path_memory)
 
 
 if __name__ == '__main__':
+    #local use
     #app.run(debug=True)
+    #Server use
     serve(app, host='0.0.0.0', port=5000)
 
 

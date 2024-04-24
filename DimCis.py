@@ -183,7 +183,7 @@ class Beam:
         p = doc.add_paragraph()
         p.add_run('e) Escolha de Armaduras').bold = True
 
-        #Criação da tabela
+        #Tabela
 
         table = doc.add_table(rows=(len(Beam.debiting(self)) + 1), cols=len(Beam.debiting(self).columns))
         table.style = 'Table Grid'
@@ -196,32 +196,3 @@ class Beam:
 
         nameDoc = self.name + '_' + 'cis' + '.docx'
         doc.save(nameDoc)
-
-
-#EXECUÇÕES
-
-#viga_01 = Beam('VA101', 80, 50, 400, 1.4, 1.4, 500, 1.15, 40, 6)
-#viga_02 = Beam('VA104', 80, 50, 600, 1.4, 1.4, 500, 1.15, 40, 6)
-
-#viga_03 = Beam('VA107', 40, 50, 400, 1.4, 1.4, 500, 1.15, 40, 4)
-
-#viga_04 = Beam('VA108_P30_P24', 40, 50, 400, 1.4, 1.4, 500, 1.15, 40, 4)
-#viga_05 = Beam('VA108_P24_P1', 40, 50, 300, 1.4, 1.4, 500, 1.15, 40, 4)
-        
-
-# viga_01 = Beam('VA101', 80, 45, 400, 1.4, 1.4, 500, 1.15, 40, 6)
-# viga_02 = Beam('VA104', 80, 45, 600, 1.4, 1.4, 500, 1.15, 40, 6)
-# viga_03 = Beam('VA107', 40, 45, 350, 1.4, 1.4, 500, 1.15, 40, 4)
-
-
-
-# viga_01.generate_memory()
-# viga_02.generate_memory()
-# viga_03.generate_memory()
-
-
-# Beam.listar_vigas()
-
-
-
-
