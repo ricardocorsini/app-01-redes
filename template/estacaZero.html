@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Estacas</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .divSolos {
+        border-color: #92a8d1;
+        border-style: solid;
+        border-width: 2px;
+        padding: 3px;
+    }
+    .divSolosGeral{
+        display: flex;
+        gap: 81px;
+        justify-content: center;
+    }
+    .container {
+        max-width: 707px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+    select, input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="text"] {
+        height: 38px;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Calculadora de Estacas</h2>
+    <div class="divSolosGeral">
+        <div class="divSolos"> 
+            <p>Areia = 1</p>
+            <p>Areia siltosa = 12</p>
+            <p>Areia siltoargilosa = 13</p>
+            <p>Areia argilosa = 14</p>
+            <p>Areia argilossiltosa = 15</p>
+        </div>
+
+        <div class="divSolos"> 
+            <p>Silte = 2</p>
+            <p>Silte arenoso = 21</p>
+            <p>Silte arenoargiloso = 22</p>
+            <p>Silte argiloso = 23</p>
+            <p>Silte argiloarenoso = 24</p>
+        </div>
+
+        <div class="divSolos"> 
+            <p>Argila = 3</p>
+            <p>Argila arenosa = 31</p>
+            <p>Argila arenossiltosa = 32</p>
+            <p>Argila siltosa = 33</p>
+            <p>Argila siltoarenosa = 34</p>        
+        </div>
+                      
+        
+    </div>
+    <form id="estacaForm">
+        <div class="form-group">
+            <label for="listaSolos">Lista de Solos:</label>
+            <input type="text" id="listaSolos" name="listaSolos" placeholder="Exemplo de entrada: 14, 14, 14, 14, 14, 31, 31, 31, 31, 31, 12, 12, 12, 12">
+        </div>
+        <div class="form-group">
+            <label for="listaNspt">Lista de NSPT:</label>
+            <select id="listaNspt" name="listaNspt">
+                <option value="nspt1">NSPT 1</option>
+                <option value="nspt2">NSPT 2</option>
+                <option value="nspt3">NSPT 3</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tipoEstaca">Tipo de Estaca:</label>
+            <select id="tipoEstaca" name="tipoEstaca">
+                <option value="tipo1">Tipo 1</option>
+                <option value="tipo2">Tipo 2</option>
+                <option value="tipo3">Tipo 3</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="diametroEstaca">Diâmetro da Estaca (mm):</label>
+            <input type="text" id="diametroEstaca" name="diametroEstaca" placeholder="Digite o diâmetro da estaca">
+        </div>
+        <div class="form-group">
+            <label for="cargaAdmissivel">Carga Admissível (kN):</label>
+            <input type="text" id="cargaAdmissivel" name="cargaAdmissivel" placeholder="Digite a carga admissível">
+        </div>
+        <input type="submit" value="Calcular">
+    </form>
+</div>
+</body>
+</html>

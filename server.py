@@ -8,6 +8,10 @@ app = Flask(__name__, template_folder='template')
 def home():
     return render_template('index.html')
 
+@app.route('/EstacaZero')
+def estaca_zero():
+    return render_template('estacaZero.html')
+
 @app.route('/submit', methods=['POST', 'GET'])
 def submit():
 
@@ -36,9 +40,9 @@ def submit():
 
 if __name__ == '__main__':
     #local use
-    #app.run(debug=True)
+    app.run(debug=True)
     #Server use
-    serve(app, host='0.0.0.0', port=5000)
+    #serve(app, host='0.0.0.0', port=5000)
 
 
 
