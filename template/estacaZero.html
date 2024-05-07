@@ -32,6 +32,7 @@
     }
     .form-group {
         margin-bottom: 20px;
+        margin-top: 20px;
     }
     label {
         font-weight: bold;
@@ -92,36 +93,40 @@
                       
         
     </div>
-    <form id="estacaForm">
+    <form id="estacaForm" action="/submitEstaca" method="post">
+        <div class="form-group">
+            <label for="fileName">Nome do arquivo:</label>
+            <input type="text" id="fileName" name="fileName" placeholder="Digite um nome para o arquivo">
+        </div>
         <div class="form-group">
             <label for="listaSolos">Lista de Solos:</label>
             <input type="text" id="listaSolos" name="listaSolos" placeholder="Exemplo de entrada: 14, 14, 14, 14, 14, 31, 31, 31, 31, 31, 12, 12, 12, 12">
         </div>
         <div class="form-group">
-            <label for="listaNspt">Lista de NSPT:</label>
-            <select id="listaNspt" name="listaNspt">
-                <option value="nspt1">NSPT 1</option>
-                <option value="nspt2">NSPT 2</option>
-                <option value="nspt3">NSPT 3</option>
-                <!-- Adicione mais opções conforme necessário -->
-            </select>
+            <label for="listaNSPT">Lista de NSPT:</label>
+            <input type="text" id="listaNspt" name="listaNspt" placeholder="Exemplo de entrada: 1, 3, 3, 6, 6, 8, 10, 12, 15, 40, 40, 40, 40">
+            
         </div>
         <div class="form-group">
             <label for="tipoEstaca">Tipo de Estaca:</label>
             <select id="tipoEstaca" name="tipoEstaca">
-                <option value="tipo1">Tipo 1</option>
-                <option value="tipo2">Tipo 2</option>
-                <option value="tipo3">Tipo 3</option>
+                <option value="Escavada">Escavada</option>
+                <option value="Hélice Contínua">Hélice Contínua</option>
+                <option value="Raiz">Raiz</option>
                 <!-- Adicione mais opções conforme necessário -->
             </select>
         </div>
         <div class="form-group">
-            <label for="diametroEstaca">Diâmetro da Estaca (mm):</label>
+            <label for="diametroEstaca">Diâmetro da Estaca (m):</label>
             <input type="text" id="diametroEstaca" name="diametroEstaca" placeholder="Digite o diâmetro da estaca">
         </div>
         <div class="form-group">
             <label for="cargaAdmissivel">Carga Admissível (kN):</label>
             <input type="text" id="cargaAdmissivel" name="cargaAdmissivel" placeholder="Digite a carga admissível">
+        </div>
+        <div class="form-group">
+            <label for="nivelAgua">Nível d'agua (m):</label>
+            <input type="text" id="nivelAgua" name="nivelAgua" placeholder="Digite o nível d'agua">
         </div>
         <input type="submit" value="Calcular">
     </form>
